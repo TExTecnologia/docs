@@ -93,7 +93,7 @@ usoFB        | int      | 0 ou 1                | Liga e desliga o Facebook Conn
 nome         | string   | -                     | Nome do cliente para utilizar no autofill
 email        | string   | -                     | Email do cliente para utilizar no autofill
 sexo         | string   | M ou F                | Sexo do cliente para utilizar no autofill
-nascimento   | string   | YYYY-MM-DD            | Data de nascimento do cliente para utilizar no autofill
+nascimento   | string   | YYYY/MM/DD            | Data de nascimento do cliente para utilizar no autofill
 telefone     | string   | 11 12345678 ou 9      | Telefone do cliente para utilizar no autofill
 
 **Obs.:** o **telefone** pode ter **8** ou **9** números.
@@ -101,7 +101,7 @@ telefone     | string   | 11 12345678 ou 9      | Telefone do cliente para utili
 **Exemplo:**
 
 ```
-usoFB=0&nome=Thiago&sexo=M&nascimento=1981-09-01&email=me@lagden.in&telefone=11%20923456789
+usoFB=0&nome=Thiago&sexo=M&nascimento=1981/09/01&email=me@lagden.in&telefone=11%20923456789
 ```
 
 ### Tracking
