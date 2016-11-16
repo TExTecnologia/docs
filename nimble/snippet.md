@@ -59,8 +59,8 @@ window.addEventListener('message', trackingNimble, false);
 </script>
 
 <!-- Nimble Iframe Snippet -->
-<script src="https://assets.nimble.com.br/snippet/iframeResizer/3.5.3/iframeResizer.min.js"></script>
-<script src="https://nome-cliente.nimble.com.br/fn.051.js"></script>
+<script src="https://assets.nimble.com.br/snippet/iframeResizer/3.5.5/iframeResizer.min.js"></script>
+<script src="https://nome-cliente.nimble.com.br/fn.053.js"></script>
 <script>texNimbleSnippet('nimbleAppPlace', 'nimbleApp', CLIENTE_NIMBLE, window.location.search, '#FFCC00');</script>
 ```
 
