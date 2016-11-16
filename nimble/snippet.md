@@ -1,6 +1,6 @@
 # Nimble - Snippet & Tracking
 
-O Nimble é uma aplicação que roda em um iframe, e para que haja comunicação entre **pai** e **filho** utilizamos o `postMessage`, desta forma você configura, por exemplo, o tracking em sua página.
+O Nimble é uma aplicação que roda em um iframe e, para que haja comunicação entre **pai** e **filho** utilizamos o `postMessage`, desta forma você configura, por exemplo, o tracking em sua página.
 
 ## Configuração
 
@@ -64,7 +64,7 @@ window.addEventListener('message', trackingNimble, false);
 <script>texNimbleSnippet('nimbleAppPlace', 'nimbleApp', CLIENTE_NIMBLE, window.location.search, '#FFCC00');</script>
 ```
 
-**Obs.:** Troque todos `https://nome-cliente.nimble.com.br` pelo o seu. 
+**Obs.:** Troque todas as urls `https://nome-cliente.nimble.com.br` pela sua. 
 
 ### Snippet
 
