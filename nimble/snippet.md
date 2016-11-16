@@ -34,7 +34,7 @@ Na página, onde o iframe será aplicado, devemos colocar o seguinte **snippet**
 <script>
 var CLIENTE_NIMBLE = 'https://nome-cliente.nimble.com.br';
 
-function trackingNimble(event) {
+function postMessageNimble(event) {
     var n;
     var origin = event.origin || event.originalEvent.origin;
 
@@ -60,7 +60,7 @@ function trackingNimble(event) {
 }
 
 // Listener
-window.addEventListener('message', trackingNimble, false);
+window.addEventListener('message', postMessageNimble, false);
 
 // Init
 texNimbleSnippet('nimbleAppPlace', 'nimbleApp', CLIENTE_NIMBLE, window.location.search, '#FFCC00');
