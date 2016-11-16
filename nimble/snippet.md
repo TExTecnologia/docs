@@ -27,7 +27,6 @@ Na página, onde o iframe será aplicado, devemos colocar o seguinte **snippet**
 <!-- Local onde iframe será adicionado -->
 <div id="nimbleAppPlace"></div>
 
-<!-- Script de tracking e load -->
 <!-- Nimble Iframe Snippet -->
 <script src="https://assets.nimble.com.br/snippet/iframeResizer/3.5.5/iframeResizer.min.js"></script>
 <script src="https://nome-cliente.nimble.com.br/fn.053.js"></script>
