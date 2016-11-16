@@ -28,6 +28,9 @@ Na página, onde o iframe será aplicado, devemos colocar o seguinte **snippet**
 <div id="nimbleAppPlace"></div>
 
 <!-- Script de tracking e load -->
+<!-- Nimble Iframe Snippet -->
+<script src="https://assets.nimble.com.br/snippet/iframeResizer/3.5.5/iframeResizer.min.js"></script>
+<script src="https://nome-cliente.nimble.com.br/fn.053.js"></script>
 <script>
 var CLIENTE_NIMBLE = 'https://nome-cliente.nimble.com.br';
 
@@ -55,13 +58,13 @@ function trackingNimble(event) {
         console.log(n); // exemplo: {code: 1, msg: 'Nova cotação'}
     }
 }
-window.addEventListener('message', trackingNimble, false);
-</script>
 
-<!-- Nimble Iframe Snippet -->
-<script src="https://assets.nimble.com.br/snippet/iframeResizer/3.5.5/iframeResizer.min.js"></script>
-<script src="https://nome-cliente.nimble.com.br/fn.053.js"></script>
-<script>texNimbleSnippet('nimbleAppPlace', 'nimbleApp', CLIENTE_NIMBLE, window.location.search, '#FFCC00');</script>
+// Listener
+window.addEventListener('message', trackingNimble, false);
+
+// Init
+texNimbleSnippet('nimbleAppPlace', 'nimbleApp', CLIENTE_NIMBLE, window.location.search, '#FFCC00');
+</script>
 ```
 
 **Obs.:** Troque todas as urls `https://nome-cliente.nimble.com.br` pela sua. 
@@ -101,7 +104,7 @@ telefone     | string   | 11 12345678 ou 9      | Telefone do cliente para utili
 usoFB=0&nome=Thiago&sexo=M&nascimento=1981-09-01&email=me@lagden.in&telefone=11%20923456789
 ```
 
-## Tracking
+### Tracking
 
 No código de tracking acima, o valor de `n` pode ser `false` ou um `JSON`.  
 Quando for um `JSON`, os possíveis valores são:
@@ -131,3 +134,7 @@ n.message = 'Falha ao fechar proposta'
 n.code = 7
 n.message = 'Proposta'
 ```
+
+## Dúvidas e sugestões
+
+Envie um email para lagden@textecnologia.com.br
