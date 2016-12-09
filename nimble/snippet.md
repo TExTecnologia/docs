@@ -135,10 +135,12 @@ n.code = 7
 n.message = 'Proposta'
 
 n.code = 8
-n.message = 'Continua'
+n.message = 'Cotação recuperada'
 ```
 
 #### Extras
+
+##### Prêmios
 
 No `'Recebeu prêmio'` (`code = 3`) temos `n.info` contendo um **array** de **objetos**.  
 Cada **objeto** tem a seguinte estrutura:
@@ -186,6 +188,13 @@ Cada **objeto** tem a seguinte estrutura:
 	}]
 }]
 ```
+
+##### Cotação recuperada
+
+Toda vez que uma cotação é recuperada via `api-token` o Nimble dispara `'Cotação recuperada'` (`code = 8`)  
+Com essa informação, é possível criar um popup questionando o usuário.
+
+Se ele responder que quer iniciar uma nova, envie um `postMessage` de volta com o a seguinte palavra: `nimbleNovaCotacao`
 
 
 ## Dúvidas e sugestões
