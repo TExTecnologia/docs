@@ -133,6 +133,9 @@ n.message = 'Falha ao fechar proposta'
 
 n.code = 7
 n.message = 'Proposta'
+
+n.code = 8
+n.message = 'Continua'
 ```
 
 #### Extras
