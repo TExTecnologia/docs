@@ -1,6 +1,6 @@
 # Nimble - Snippet & Tracking
 
-O Nimble é uma aplicação que roda em um iframe e, para que haja comunicação entre **pai** e **filho** utilizamos o `postMessage`, desta forma você configura, por exemplo, o tracking em sua página.
+O Nimble é uma aplicação que roda em um iframe. Para que haja comunicação entre **site do cliente** e **Nimble** utilizamos o `postMessage`, desta forma você configura, por exemplo, o tracking em sua página.
 
 ## Configuração
 
@@ -120,6 +120,7 @@ n.message = 'Gravou'
 
 n.code = 3
 n.message = 'Recebeu prêmio'
+n.info = [...veja o Extras abaixo...]
 
 n.code = 4
 n.message = 'Falha no prêmio'
@@ -133,6 +134,56 @@ n.message = 'Falha ao fechar proposta'
 n.code = 7
 n.message = 'Proposta'
 ```
+
+#### Extras
+
+No `'Recebeu prêmio'` (`code = 3`) temos `n.info` contendo um **array** de **objetos**.  
+Cada **objeto** tem a seguinte estrutura:
+
+`seguradora`, `codigo` e `franquias`
+
+```json
+{
+	"seguradora": "Nome da Seguradora",
+	"codigo": "Código da seguradora",
+	"franquias": [{
+		"tipo": "Tipo da franquia",
+		"premio": "Valor do seguro",
+		"franquia": "Valor da franquia"
+	}]
+}
+```
+
+**Exemplo:**
+
+```json
+[{
+	"seguradora": "Tokio Marine",
+	"codigo": "6190",
+	"franquias": [{
+		"tipo": "Normal",
+		"premio": "3.037,82",
+		"franquia": "2.500,00"
+	}, {
+		"tipo": "Reduzida",
+		"premio": "3.416,29",
+		"franquia": "1.250,00"
+	}]
+}, {
+	"seguradora": "Tokio Marine Clássico",
+	"codigo": "5916",
+	"franquias": [{
+		"tipo": "Normal",
+		"premio": "3.034,92",
+		"franquia": "2.750,00"
+	}, {
+		"tipo": "Reduzida",
+		"premio": "3.413,39",
+		"franquia": "1.375,00"
+	}]
+}]
+```
+
 
 ## Dúvidas e sugestões
 
