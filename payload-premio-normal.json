@@ -1,0 +1,22 @@
+{
+  "calculo": "14922",
+  "item": 1,
+  "premios": [
+    {
+      "seguradora": "Mapfre",
+      "codigo": "6238",
+      "franquias": [
+        {
+          "tipo": "(100%) Normal",
+          "premio": "7035.45",
+          "franquia": "3334"
+        },
+        {
+          "tipo": "(50%) Reduzida",
+          "premio": "8232.69",
+          "franquia": "1667"
+        }
+      ]
+    }
+  ]
+}
