@@ -43,20 +43,6 @@ const caixas = [
   ".coberturas",
   ".descontos",
   ".produtos",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
-  ".fechamento",
   ".fechamento"
 ]
 
