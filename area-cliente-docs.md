@@ -12,6 +12,16 @@ cpf       | String | Sim       | cpf do cliente
 password  | String | Sim       | senha do cliente
 slug      | String | Sim       | nome de identificação da corretora
 
+#### Request
+
+``` xml
+```
+
+#### Response
+
+``` xml
+```
+
 ---
 
 ### esqueceuSenhaAreaCliente
@@ -25,6 +35,16 @@ cpf       | String | Sim |
 uri       | String | Sim |
 token     | String | Sim |
 
+#### Request
+
+``` xml
+```
+
+#### Response
+
+``` xml
+```
+
 ---
 
 ### resetSenhaAreaCliente
@@ -37,6 +57,16 @@ slug      | String | Sim |
 cpf       | String | Sim |
 novaSenha | String | Sim |
 token     | String | Sim |
+
+#### Request
+
+``` xml
+```
+
+#### Response
+
+``` xml
+```
 
 ---
 
@@ -52,6 +82,16 @@ CPF       | String | Sim |
 page      | Int    | Sim |
 perpage   | Int    | Sim |
 
+#### Request
+
+``` xml
+```
+
+#### Response
+
+``` xml
+```
+
 ---
 
 ### listaPropostaAreaCliente
@@ -65,6 +105,16 @@ ramo      | String | Sim |
 CPF       | String | Sim |
 page      | Int    | Sim |
 perpage   | Int    | Sim |
+
+#### Request
+
+``` xml
+```
+
+#### Response
+
+``` xml
+```
 
 ---
 
@@ -86,6 +136,16 @@ CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
 certificado  | Int    | Sim |
 
+#### Request
+
+``` xml
+```
+
+#### Response
+
+``` xml
+```
+
 ---
 
 ### listaApoliceAreaCliente
@@ -100,6 +160,16 @@ CPF          | String | Sim |
 page         | Int    | Sim |
 perpage      | Int    | Sim |
 
+#### Request
+
+``` xml
+```
+
+#### Response
+
+``` xml
+```
+
 ---
 
 ### getApoliceAreaCliente
@@ -110,3 +180,13 @@ senha        | String | Sim |
 CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
 calculo      | Int    | Sim |
+
+#### Request
+
+``` xml
+```
+
+#### Response
+
+``` xml
+```
