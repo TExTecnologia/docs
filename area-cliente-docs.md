@@ -5,7 +5,7 @@
 ### loginAreaCliente
 
 Argumento | Tipo   | Requirido | Descrição
-:-------  | :--:   | :-------: | :-------:
+:-------  | :--:   | :-------: | :-------
 senhaArea | String | Sim       | Senha da aplicação
 senha     | String | Sim       | Senha da corretora para utilizar o WS
 cpf       | String | Sim       | CPF do cliente
@@ -27,7 +27,7 @@ slug      | String | Sim       | Nome de identificação da corretora
 ### esqueceuSenhaAreaCliente
 
 Argumento | Tipo   | Requirido | Descrição
-:-------  | :--:   | :-------: | :-------:
+:-------  | :--:   | :-------: | :-------
 senha     | String | Sim | Senha da corretora para utilizar o WS
 senhaArea | String | Sim | Senha da aplicação
 slug      | String | Sim | Nome de identificação da corretora
@@ -50,7 +50,7 @@ token     | String | Sim |
 ### resetSenhaAreaCliente
 
 Argumento | Tipo   | Requirido | Descrição
-:-------  | :--:   | :-------: | :-------:
+:-------  | :--:   | :-------: | :-------
 senha     | String | Sim | Senha da corretora para utilizar o WS
 senhaArea | String | Sim | Senha da aplicação
 slug      | String | Sim | Nome de identificação da corretora
@@ -73,7 +73,7 @@ token     | String | Sim |
 ### listaCotacoesAreaCliente
 
 Argumento | Tipo   | Requirido | Descrição
-:-------  | :--:   | :-------: | :-------:
+:-------  | :--:   | :-------: | :-------
 senha     | String | Sim | Senha da corretora para utilizar o WS
 CodCorr   | Int    | Sim |
 SenhaCorr | String | Sim |
@@ -97,7 +97,7 @@ perpage   | Int    | Sim |
 ### listaPropostaAreaCliente
 
 Argumento | Tipo   | Requirido | Descrição
-:-------  | :--:   | :-------: | :-------:
+:-------  | :--:   | :-------: | :-------
 senha     | String | Sim |
 CodCorr   | Int    | Sim |
 SenhaCorr | String | Sim |
