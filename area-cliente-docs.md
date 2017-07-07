@@ -121,7 +121,7 @@ perpage   | Int    | Sim |
 ### ultimaPropostaAreaCliente
 
 Argumento    | Tipo   | Requirido | Descrição
-:-------     | :--:   | :-------: | :-------:
+:-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
@@ -130,7 +130,7 @@ CPF          | String | Sim | CPF do cliente
 ### getPropostaAreaCliente
 
 Argumento    | Tipo   | Requirido | Descrição
-:-------     | :--:   | :-------: | :-------:
+:-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
@@ -151,7 +151,7 @@ certificado  | Int    | Sim |
 ### listaApoliceAreaCliente
 
 Argumento    | Tipo   | Requirido | Descrição
-:-------     | :--:   | :-------: | :-------:
+:-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
@@ -175,7 +175,7 @@ perpage      | Int    | Sim |
 ### getApoliceAreaCliente
 
 Argumento    | Tipo   | Requirido | Descrição
-:-------     | :--:   | :-------: | :-------:
+:-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
