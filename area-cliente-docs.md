@@ -8,9 +8,9 @@ Argumento | Tipo   | Requirido | Descrição
 :-------  | :--:   | :-------: | :-------:
 senhaArea | String | Sim       | Senha da aplicação
 senha     | String | Sim       | Senha da corretora para utilizar o WS
-cpf       | String | Sim       | cpf do cliente
-password  | String | Sim       | senha do cliente
-slug      | String | Sim       | nome de identificação da corretora
+cpf       | String | Sim       | CPF do cliente
+password  | String | Sim       | Senha do cliente
+slug      | String | Sim       | Nome de identificação da corretora
 
 #### Request
 
@@ -28,10 +28,10 @@ slug      | String | Sim       | nome de identificação da corretora
 
 Argumento | Tipo   | Requirido | Descrição
 :-------  | :--:   | :-------: | :-------:
-senha     | String | Sim |
-senhaArea | String | Sim |
-slug      | String | Sim |
-cpf       | String | Sim |
+senha     | String | Sim | Senha da corretora para utilizar o WS
+senhaArea | String | Sim | Senha da aplicação
+slug      | String | Sim | Nome de identificação da corretora
+cpf       | String | Sim | CPF do cliente
 uri       | String | Sim |
 token     | String | Sim |
 
@@ -51,10 +51,10 @@ token     | String | Sim |
 
 Argumento | Tipo   | Requirido | Descrição
 :-------  | :--:   | :-------: | :-------:
-senha     | String | Sim |
-senhaArea | String | Sim |
-slug      | String | Sim |
-cpf       | String | Sim |
+senha     | String | Sim | Senha da corretora para utilizar o WS
+senhaArea | String | Sim | Senha da aplicação
+slug      | String | Sim | Nome de identificação da corretora
+cpf       | String | Sim | CPF do cliente
 novaSenha | String | Sim |
 token     | String | Sim |
 
@@ -74,11 +74,11 @@ token     | String | Sim |
 
 Argumento | Tipo   | Requirido | Descrição
 :-------  | :--:   | :-------: | :-------:
-senha     | String | Sim |
+senha     | String | Sim | Senha da corretora para utilizar o WS
 CodCorr   | Int    | Sim |
 SenhaCorr | String | Sim |
 ramo      | String | Sim |
-CPF       | String | Sim |
+CPF       | String | Sim | CPF do cliente
 page      | Int    | Sim |
 perpage   | Int    | Sim |
 
@@ -102,7 +102,7 @@ senha     | String | Sim |
 CodCorr   | Int    | Sim |
 SenhaCorr | String | Sim |
 ramo      | String | Sim |
-CPF       | String | Sim |
+CPF       | String | Sim | CPF do cliente
 page      | Int    | Sim |
 perpage   | Int    | Sim |
 
@@ -122,16 +122,16 @@ perpage   | Int    | Sim |
 
 Argumento    | Tipo   | Requirido | Descrição
 :-------     | :--:   | :-------: | :-------:
-senha        | String | Sim |
+senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
-CPF          | String | Sim |
+CPF          | String | Sim | CPF do cliente
 
 ### getPropostaAreaCliente
 
 Argumento    | Tipo   | Requirido | Descrição
 :-------     | :--:   | :-------: | :-------:
-senha        | String | Sim |
+senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
 certificado  | Int    | Sim |
@@ -152,11 +152,11 @@ certificado  | Int    | Sim |
 
 Argumento    | Tipo   | Requirido | Descrição
 :-------     | :--:   | :-------: | :-------:
-senha        | String | Sim |
+senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
 ramo         | String | Sim |
-CPF          | String | Sim |
+CPF          | String | Sim | CPF do cliente
 page         | Int    | Sim |
 perpage      | Int    | Sim |
 
@@ -176,7 +176,7 @@ perpage      | Int    | Sim |
 
 Argumento    | Tipo   | Requirido | Descrição
 :-------     | :--:   | :-------: | :-------:
-senha        | String | Sim |
+senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
 SenhaCorr    | String | Sim |
 calculo      | Int    | Sim |
