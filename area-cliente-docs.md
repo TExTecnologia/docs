@@ -61,7 +61,7 @@ slug      | String | Sim       | Nome de identificação da corretora
 
 ### esqueceuSenhaAreaCliente
 
-Dispara um email para o cliente com um link contendo um **token** para o usuário alterar a senha
+Dispara um email para o cliente com um link para o usuário alterar a senha
 
 Argumento | Tipo   | Requirido | Descrição
 :-------  | :--:   | :-------: | :-------
