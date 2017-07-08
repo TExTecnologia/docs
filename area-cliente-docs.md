@@ -8,7 +8,7 @@
 
 Efetua o login na aplicação
 
-Argumento | Tipo   | Requirido | Descrição
+Parâmetro | Tipo   | Requirido | Descrição
 --------- | :----: | :-------: | ---------
 senhaArea | String | Sim       | Senha da aplicação
 senha     | String | Sim       | Senha da corretora para utilizar o WS
@@ -63,8 +63,8 @@ slug      | String | Sim       | Nome de identificação da corretora
 
 Dispara um email para o cliente com um link para o usuário alterar a senha
 
-Argumento | Tipo   | Requirido | Descrição
-:-------  | :--:   | :-------: | :-------
+Parâmetro | Tipo   | Requirido | Descrição
+--------- | :----: | :-------: | ---------
 senha     | String | Sim       | Senha da corretora para utilizar o WS
 senhaArea | String | Sim       | Senha da aplicação
 slug      | String | Sim       | Nome de identificação da corretora
@@ -111,8 +111,8 @@ token     | String | Sim       | Hash de identificação da requisição
 
 Altera senha do usuário
 
-Argumento | Tipo   | Requirido | Descrição
-:-------  | :----: | :-------: | :-------
+Parâmetro | Tipo   | Requirido | Descrição
+--------  | :----: | :-------: | ---------
 senha     | String | Sim       | Senha da corretora para utilizar o WS
 senhaArea | String | Sim       | Senha da aplicação
 slug      | String | Sim       | Nome de identificação da corretora
@@ -156,8 +156,8 @@ token     | String | Sim       | Hash de identificação da requisição
 
 ### listaCotacoesAreaCliente
 
-Argumento | Tipo   | Requirido | Default    | Descrição
---------  | :--:   | :-------: | :--------: | --------
+Parâmetro | Tipo   | Requirido | Default    | Descrição
+--------- | :----: | :-------: | :--------: | ---------
 senha     | String | Sim       | -          | Senha da corretora para utilizar o WS
 CodCorr   | Int    | Sim       | -          | Código da corretora
 SenhaCorr | String | Sim       | -          | Senha da corretora
@@ -239,7 +239,7 @@ Link para o [XML](https://link.do/arquivo.xml) completo
 
 ### listaPropostaAreaCliente
 
-Argumento | Tipo   | Requirido | Descrição
+Parâmetro | Tipo   | Requirido | Descrição
 :-------  | :--:   | :-------: | :-------
 senha     | String | Sim |
 CodCorr   | Int    | Sim |
@@ -263,7 +263,7 @@ perpage   | Int    | Sim |
 
 ### ultimaPropostaAreaCliente
 
-Argumento    | Tipo   | Requirido | Descrição
+Parâmetro    | Tipo   | Requirido | Descrição
 :-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
@@ -272,7 +272,7 @@ CPF          | String | Sim | CPF do cliente
 
 ### getPropostaAreaCliente
 
-Argumento    | Tipo   | Requirido | Descrição
+Parâmetro    | Tipo   | Requirido | Descrição
 :-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
@@ -293,7 +293,7 @@ certificado  | Int    | Sim |
 
 ### listaApoliceAreaCliente
 
-Argumento    | Tipo   | Requirido | Descrição
+Parâmetro    | Tipo   | Requirido | Descrição
 :-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
@@ -317,7 +317,7 @@ perpage      | Int    | Sim |
 
 ### getApoliceAreaCliente
 
-Argumento    | Tipo   | Requirido | Descrição
+Parâmetro    | Tipo   | Requirido | Descrição
 :-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
 CodCorr      | Int    | Sim |
