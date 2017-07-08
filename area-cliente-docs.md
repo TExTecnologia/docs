@@ -161,9 +161,9 @@ Argumento | Tipo   | Requirido | Default    | Descrição
 senha     | String | Sim       | -          | Senha da corretora para utilizar o WS
 CodCorr   | Int    | Sim       | -          | Código da corretora
 SenhaCorr | String | Sim       | -          | Senha da corretora
-ramo      | String | Não       | todos      | Tido do seguro
+ramo      | String | Sim       | -          | Ramo do seguro (utilize `todos`)
 CPF       | String | Sim       | -          | CPF do cliente
-page      | Int    | Não       | 1          | Página
+page      | Int    | Não       | 1          | Página atual
 perpage   | Int    | Não       | 10         | Total de itens por página
 
 
