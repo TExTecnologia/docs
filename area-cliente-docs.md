@@ -16,6 +16,7 @@ cpf       | String | Sim       | CPF do cliente
 password  | String | Sim       | Senha do cliente
 slug      | String | Sim       | Nome de identificação da corretora
 
+
 #### Request
 
 ``` xml
@@ -25,7 +26,7 @@ slug      | String | Sim       | Nome de identificação da corretora
         <ns1:loginAreaCliente>
             <senhaArea xsi:type="xsd:string">senha_da_area</senhaArea>
             <senha xsi:type="xsd:string">senha_do_ws</senha>
-            <cpf xsi:type="xsd:string">21889781886</cpf>
+            <cpf xsi:type="xsd:string">84726891740</cpf>
             <password xsi:type="xsd:string">1234</password>
             <slug xsi:type="xsd:string">sandbox</slug>
         </ns1:loginAreaCliente>
@@ -35,8 +36,6 @@ slug      | String | Sim       | Nome de identificação da corretora
 
 #### [OK] Response
 
-Link para o [[OK] Response]() completo
-
 ``` xml
 <cliente>
     <codcorr>8</codcorr>
@@ -44,7 +43,7 @@ Link para o [[OK] Response]() completo
     <nome>John Doe</nome>
     <celular>11912341234</celular>
     <email>doe@textecnologia.com.br</email>
-    <cpf>21889781886</cpf>
+    <cpf>84726891740</cpf>
     <facebook>true</facebook>
     <iframe></iframe>
 </cliente>
@@ -52,15 +51,12 @@ Link para o [[OK] Response]() completo
 
 #### [ERROR] Response
 
-Link para o [[ERROR] Response](https://link.do/arquivo.xml) completo
-
 ```xml
 <erro>Usuário não encontrado</erro>
 ```
 
 
 ---
-
 
 
 ### esqueceuSenhaAreaCliente
@@ -76,6 +72,7 @@ cpf       | String | Sim | CPF do cliente
 uri       | String | Sim | URL da aplicação que será passado no email
 token     | String | Sim | Hash de identificação da requisição
 
+
 #### Request
 
 ``` xml
@@ -86,7 +83,7 @@ token     | String | Sim | Hash de identificação da requisição
             <senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
             <senhaarea xsi:type="xsd:string">FFCC00FF!!GO$</senhaarea>
             <slug xsi:type="xsd:string">sandbox</slug>
-            <cpf xsi:type="xsd:string">21889781886</cpf>
+            <cpf xsi:type="xsd:string">84726891740</cpf>
             <uri xsi:type="xsd:string">https://sua.aplicacao/esqueceu-a-senha/85e1c9ab7788bacb481c8ed137c41840</uri>
             <token xsi:type="xsd:string">85e1c9ab7788bacb481c8ed137c41840</token>
         </ns1:esqueceuSenhaAreaCliente>
@@ -102,15 +99,17 @@ token     | String | Sim | Hash de identificação da requisição
 
 #### [ERROR] Response
 
-Link para o [[ERROR] Response](https://link.do/arquivo.xml) completo
-
 ```xml
 <success>false</success>
 ```
 
+
 ---
 
+
 ### resetSenhaAreaCliente
+
+Altera senha do usuário
 
 Argumento | Tipo   | Requirido | Descrição
 :-------  | :--:   | :-------: | :-------
@@ -121,29 +120,51 @@ cpf       | String | Sim | CPF do cliente
 novaSenha | String | Sim |
 token     | String | Sim |
 
+
 #### Request
 
 ``` xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+    <SOAP-ENV:Body>
+        <ns1:resetSenhaAreaCliente>
+            <senha xsi:type="xsd:string">senha_do_ws</senha>
+            <senhaarea xsi:type="xsd:string">senha_da_area</senhaarea>
+            <slug xsi:type="xsd:string">sandbox</slug>
+            <cpf xsi:type="xsd:string">84726891740</cpf>
+            <novasenha xsi:type="xsd:string">1234</novasenha>
+            <token xsi:type="xsd:string">85e1c9ab7788bacb481c8ed137c41840</token>
+        </ns1:resetSenhaAreaCliente>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
 ```
 
-#### Response
+#### [OK] Response
 
 ``` xml
+<success>true</success>
+```
+
+#### [ERROR] Response
+
+```xml
+<success>false</success>
 ```
 
 ---
 
+
 ### listaCotacoesAreaCliente
 
-Argumento | Tipo   | Requirido | Descrição
-:-------  | :--:   | :-------: | :-------
-senha     | String | Sim | Senha da corretora para utilizar o WS
-CodCorr   | Int    | Sim |
-SenhaCorr | String | Sim |
-ramo      | String | Sim |
-CPF       | String | Sim | CPF do cliente
-page      | Int    | Sim |
-perpage   | Int    | Sim |
+Argumento | Tipo   | Requirido | Default    | Descrição
+--------  | :--:   | :-------: | :--------: | --------
+senha     | String | Sim       | -          | Senha da corretora para utilizar o WS
+CodCorr   | Int    | Sim       | -          | Código da corretora
+SenhaCorr | String | Sim       | -          | Senha da corretora
+ramo      | String | Não       | todos      | Tido do seguro
+CPF       | String | Sim       | -          | CPF do cliente
+page      | Int    | Não       | 1          | Página
+perpage   | Int    | Não       | 10         | Total de itens por página
 
 
 ``` xml
@@ -151,46 +172,70 @@ perpage   | Int    | Sim |
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
     <SOAP-ENV:Body>
         <ns1:listaCotacoesAreaCliente>
-            <senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
+            <senha xsi:type="xsd:string">senha_do_ws</senha>
             <CodCorr xsi:type="xsd:int">8</CodCorr>
-            <SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
+            <SenhaCorr xsi:type="xsd:string">senha_da_corretora</SenhaCorr>
             <ramo xsi:type="xsd:string">todos</ramo>
-            <CPF xsi:type="xsd:string">21889781886</CPF>
-            <page xsi:type="xsd:int">1</page>
-            <perpage xsi:type="xsd:int">10</perpage>
+            <CPF xsi:type="xsd:string">84726891740</CPF>
+            <page xsi:type="xsd:int">3</page>
+            <perpage xsi:type="xsd:int">2</perpage>
         </ns1:listaCotacoesAreaCliente>
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 ```
 
-#### Response
+#### [OK] Response
+
+Link para o [XML](https://link.do/arquivo.xml) completo
 
 ``` xml
 <?xml version="1.0"?>
 <retorno>
     <pagination>
         <total>114</total>
-        <page>1</page>
-        <pages>12</pages>
-        <perpage>10</perpage>
+        <page>3</page>
+        <pages>57</pages>
+        <perpage>2</perpage>
     </pagination>
     <colunas>
         <cotacoes>{"calcn": "Cálculo","ramo": "Ramo", "item": "Bem Segurado", "tipo": "Tipo de Seguro", "datacalculo": "Data do Cálculo", "iniciovigencia": "Início de Vigência"}</cotacoes>
     </colunas>
     <cotacoes>
         <cotacao>
-            <token>/OzVtEpLV4LBqjE93NsJg2fhyNG/autZKfdYz/yRcPl1iYTxDMTQVBRHWZUd</token>
-            <calcn>15648</calcn>
+            <token>/OzVsOrGnptqri7I1fY=</token>
+            <calcn>15606</calcn>
+            <ramo>Automóvel</ramo>
+            <item>ONIX LTZ 1.4 FLEX 4P AT</item>
+            <tipo>Novo</tipo>
+            <datacalculo>30/06/2017</datacalculo>
+            <iniciovigencia>30/06/2017</iniciovigencia>
+        </cotacao>
+        <cotacao>
+            <token>/OzWaGosfLzuF4uaWlhhCUmtY+S73dpNxwnNcpAzibWbaHcDnLWrLSQrefQ3</token>
+            <calcn>15583</calcn>
             <ramo>Automóvel</ramo>
             <item>ONIX LT 1.4 FLEX 4P AT</item>
             <tipo>Novo</tipo>
-            <datacalculo>06/07/2017</datacalculo>
-            <iniciovigencia>06/07/2017</iniciovigencia>
+            <datacalculo>29/06/2017</datacalculo>
+            <iniciovigencia>29/06/2017</iniciovigencia>
         </cotacao>
-        <!--- ... -->
+    </cotacoes>
+</retorno>
 ```
 
+#### [ERROR] Response
+
+```xml
+<erro>Falha de autenticação.</erro>
+```
+
+```xml
+<erro>Você não possui cotações em aberto</erro>
+```
+
+
 ---
+
 
 ### listaPropostaAreaCliente
 
