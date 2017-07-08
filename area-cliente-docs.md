@@ -9,7 +9,7 @@
 Efetua o login na aplicação
 
 Argumento | Tipo   | Requirido | Descrição
-:-------  | :--:   | :-------: | :-------
+--------- | :----: | :-------: | ---------
 senhaArea | String | Sim       | Senha da aplicação
 senha     | String | Sim       | Senha da corretora para utilizar o WS
 cpf       | String | Sim       | CPF do cliente
@@ -65,12 +65,12 @@ Dispara um email para o cliente com um link para o usuário alterar a senha
 
 Argumento | Tipo   | Requirido | Descrição
 :-------  | :--:   | :-------: | :-------
-senha     | String | Sim | Senha da corretora para utilizar o WS
-senhaArea | String | Sim | Senha da aplicação
-slug      | String | Sim | Nome de identificação da corretora
-cpf       | String | Sim | CPF do cliente
-uri       | String | Sim | URL da aplicação que será passado no email
-token     | String | Sim | Hash de identificação da requisição
+senha     | String | Sim       | Senha da corretora para utilizar o WS
+senhaArea | String | Sim       | Senha da aplicação
+slug      | String | Sim       | Nome de identificação da corretora
+cpf       | String | Sim       | CPF do cliente
+uri       | String | Sim       | URL da aplicação que será passado no email
+token     | String | Sim       | Hash de identificação da requisição
 
 
 #### Request
@@ -80,8 +80,8 @@ token     | String | Sim | Hash de identificação da requisição
 <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
     <SOAP-ENV:Body>
         <ns1:esqueceuSenhaAreaCliente>
-            <senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
-            <senhaarea xsi:type="xsd:string">FFCC00FF!!GO$</senhaarea>
+            <senha xsi:type="xsd:string">senha_do_ws</senha>
+            <senhaarea xsi:type="xsd:string">senha_da_area</senhaarea>
             <slug xsi:type="xsd:string">sandbox</slug>
             <cpf xsi:type="xsd:string">84726891740</cpf>
             <uri xsi:type="xsd:string">https://sua.aplicacao/esqueceu-a-senha/85e1c9ab7788bacb481c8ed137c41840</uri>
@@ -112,13 +112,13 @@ token     | String | Sim | Hash de identificação da requisição
 Altera senha do usuário
 
 Argumento | Tipo   | Requirido | Descrição
-:-------  | :--:   | :-------: | :-------
-senha     | String | Sim | Senha da corretora para utilizar o WS
-senhaArea | String | Sim | Senha da aplicação
-slug      | String | Sim | Nome de identificação da corretora
-cpf       | String | Sim | CPF do cliente
-novaSenha | String | Sim |
-token     | String | Sim |
+:-------  | :----: | :-------: | :-------
+senha     | String | Sim       | Senha da corretora para utilizar o WS
+senhaArea | String | Sim       | Senha da aplicação
+slug      | String | Sim       | Nome de identificação da corretora
+cpf       | String | Sim       | CPF do cliente
+novaSenha | String | Sim       | Nova senha do cliente
+token     | String | Sim       | Hash de identificação da requisição
 
 
 #### Request
@@ -214,7 +214,7 @@ Link para o [XML](https://link.do/arquivo.xml) completo
             <token>/OzWaGosfLzuF4uaWlhhCUmtY+S73dpNxwnNcpAzibWbaHcDnLWrLSQrefQ3</token>
             <calcn>15583</calcn>
             <ramo>Automóvel</ramo>
-            <item>ONIX LT 1.4 FLEX 4P AT</item>
+            <item>CITY EX 1.5 4P AT</item>
             <tipo>Novo</tipo>
             <datacalculo>29/06/2017</datacalculo>
             <iniciovigencia>29/06/2017</iniciovigencia>
