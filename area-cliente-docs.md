@@ -403,18 +403,81 @@ CPF          | String | Sim | CPF do cliente
 Parâmetro    | Tipo   | Requerido | Descrição
 :-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
-CodCorr      | Int    | Sim |
-SenhaCorr    | String | Sim |
-certificado  | Int    | Sim |
+CodCorr      | Int    | Sim | Código da corretora
+SenhaCorr    | String | Sim | Senha da corretora
+certificado  | Int    | Sim | ID da proposta no TELEPORT
 
 #### Request
 
 ``` xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<Body>
+		<getPropostaAreaCliente>
+			<senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
+			<CodCorr xsi:type="xsd:int">8</CodCorr>
+			<SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
+			<certificado xsi:type="xsd:int">306157</certificado>
+		</getPropostaAreaCliente>
+	</Body>
+</Envelope>
 ```
 
-#### Response
+#### [OK] Response
 
 ``` xml
+<?xml version="1.0"?>
+<retorno>
+	<colunas>
+		<dados>{"proposta": "Proposta", "seguradora": "Seguradora", "ramo": "Ramo", "item": "Bem Segurado", "tipo": "Tipo de Seguro", "dataproposta": "Data da Contratação da Proposta", "iniciovigencia": "Início de Vigência", "situacao": "Situação"}</dados>
+	</colunas>
+	<proposta>
+		<dados>
+			<certificado>306157</certificado>
+			<proposta>69286767</proposta>
+			<seguradora>ITAU SEGUROS S/A</seguradora>
+			<ramo>Automóvel</ramo>
+			<item>ONIX LTZ 1.4 FLEX 4P AT</item>
+			<tipo>Novo</tipo>
+			<dataproposta>09/06/2017</dataproposta>
+			<iniciovigencia>09/06/2017</iniciovigencia>
+			<situacao>Em Emissão</situacao>
+		</dados>
+		<status>
+			<gravacao>
+				<label>Cotação Realizada</label>
+				<flag>true</flag>
+				<date>09/06/2017</date>
+			</gravacao>
+			<proposta>
+				<label>Proposta Transmitida</label>
+				<flag>true</flag>
+				<date>09/06/2017</date>
+			</proposta>
+			<pagamento>
+				<label>Pagamento</label>
+				<flag>disabled</flag>
+				<date></date>
+			</pagamento>
+			<vistoria>
+				<label>Vistoria</label>
+				<flag>disabled</flag>
+				<date></date>
+			</vistoria>
+			<apolice>
+				<label>Apólice</label>
+				<flag>disable</flag>
+				<date></date>
+			</apolice>
+		</status>
+	</proposta>
+</retorno>
+```
+
+#### [ERROR] Response
+
+``` xml
+<erro>Falha de autenticação.</erro>
 ```
 
 ---
