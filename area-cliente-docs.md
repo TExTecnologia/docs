@@ -26,8 +26,8 @@ slug      | String | Sim       | Nome de identificação da corretora
         <ns1:loginAreaCliente>
             <senhaArea xsi:type="xsd:string">senha_da_area</senhaArea>
             <senha xsi:type="xsd:string">senha_do_ws</senha>
-            <cpf xsi:type="xsd:string">84726891740</cpf>
-            <password xsi:type="xsd:string">1234</password>
+            <cpf xsi:type="xsd:string">cpf_do_cliente</cpf>
+            <password xsi:type="xsd:string">senha_do_cliente</password>
             <slug xsi:type="xsd:string">sandbox</slug>
         </ns1:loginAreaCliente>
     </SOAP-ENV:Body>
@@ -38,14 +38,14 @@ slug      | String | Sim       | Nome de identificação da corretora
 
 ``` xml
 <cliente>
-    <codcorr>8</codcorr>
+    <codcorr>codigo_da_corretora</codcorr>
     <senhacorr>senha_da_corretora</senhacorr>
-    <nome>John Doe</nome>
-    <celular>11912341234</celular>
-    <email>doe@textecnologia.com.br</email>
-    <cpf>84726891740</cpf>
-    <facebook>true</facebook>
-    <iframe></iframe>
+    <nome>nome_do_cliente</nome>
+    <celular>celular_do_cliente</celular>
+    <email>email_do_cliente</email>
+    <cpf>cpf_do_cliente</cpf>
+    <facebook>id_do_facebook_do_cliente</facebook>
+    <iframe>url_do_nimble</iframe>
 </cliente>
 ```
 
@@ -83,7 +83,7 @@ token     | String | Sim       | Hash de identificação da requisição
             <senha xsi:type="xsd:string">senha_do_ws</senha>
             <senhaarea xsi:type="xsd:string">senha_da_area</senhaarea>
             <slug xsi:type="xsd:string">sandbox</slug>
-            <cpf xsi:type="xsd:string">84726891740</cpf>
+            <cpf xsi:type="xsd:string">cpf_do_cliente</cpf>
             <uri xsi:type="xsd:string">https://sua.aplicacao/esqueceu-a-senha/85e1c9ab7788bacb481c8ed137c41840</uri>
             <token xsi:type="xsd:string">85e1c9ab7788bacb481c8ed137c41840</token>
         </ns1:esqueceuSenhaAreaCliente>
@@ -131,7 +131,7 @@ token     | String | Sim       | Hash de identificação da requisição
             <senha xsi:type="xsd:string">senha_do_ws</senha>
             <senhaarea xsi:type="xsd:string">senha_da_area</senhaarea>
             <slug xsi:type="xsd:string">sandbox</slug>
-            <cpf xsi:type="xsd:string">84726891740</cpf>
+            <cpf xsi:type="xsd:string">cpf_do_cliente</cpf>
             <novasenha xsi:type="xsd:string">1234</novasenha>
             <token xsi:type="xsd:string">85e1c9ab7788bacb481c8ed137c41840</token>
         </ns1:resetSenhaAreaCliente>
@@ -176,12 +176,12 @@ perpage   | Int    | Não       | 10         | Total de itens por página
     <SOAP-ENV:Body>
         <ns1:listaCotacoesAreaCliente>
             <senha xsi:type="xsd:string">senha_do_ws</senha>
-            <CodCorr xsi:type="xsd:int">8</CodCorr>
+            <CodCorr xsi:type="xsd:int">codigo_da_corretora</CodCorr>
             <SenhaCorr xsi:type="xsd:string">senha_da_corretora</SenhaCorr>
             <ramo xsi:type="xsd:string">todos</ramo>
-            <CPF xsi:type="xsd:string">84726891740</CPF>
-            <page xsi:type="xsd:int">3</page>
-            <perpage xsi:type="xsd:int">2</perpage>
+            <CPF xsi:type="xsd:string">cpf_do_cliente</CPF>
+            <page xsi:type="xsd:int">1</page>
+            <perpage xsi:type="xsd:int">10</perpage>
         </ns1:listaCotacoesAreaCliente>
     </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
@@ -259,11 +259,11 @@ perpage   | Int    | Sim | Total de itens por página
 <Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 	<Body>
 		<listaCotacoesAreaCliente>
-			<senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
-			<CodCorr xsi:type="xsd:int">8</CodCorr>
-			<SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
+			<senha xsi:type="xsd:string">senha_do_ws</senha>
+			<CodCorr xsi:type="xsd:int">codigo_da_corretora</CodCorr>
+			<SenhaCorr xsi:type="xsd:string">senha_da_corretora</SenhaCorr>
 			<ramo xsi:type="xsd:string">todos</ramo>
-			<CPF xsi:type="xsd:string">21889781886</CPF>
+			<CPF xsi:type="xsd:string">cpf_do_cliente</CPF>
 			<page xsi:type="xsd:int">1</page>
 			<perpage xsi:type="xsd:int">10</perpage>
 		</listaCotacoesAreaCliente>
@@ -338,10 +338,10 @@ CPF          | String | Sim | CPF do cliente
 <Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 	<Body>
 		<ultimaPropostaAreaCliente>
-			<senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
-			<CodCorr xsi:type="xsd:int">8</CodCorr>
-			<SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
-			<CPF xsi:type="xsd:string">21889781886</CPF>
+			<senha xsi:type="xsd:string">senha_da_ws</senha>
+			<CodCorr xsi:type="xsd:int">codigo_da_corretora</CodCorr>
+			<SenhaCorr xsi:type="xsd:string">senha_da_corretora</SenhaCorr>
+			<CPF xsi:type="xsd:string">cpf_do_cliente</CPF>
 		</ultimaPropostaAreaCliente>
 	</Body>
 </Envelope>
@@ -422,9 +422,9 @@ certificado  | Int    | Sim | ID da proposta no TELEPORT
 <Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 	<Body>
 		<getPropostaAreaCliente>
-			<senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
-			<CodCorr xsi:type="xsd:int">8</CodCorr>
-			<SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
+			<senha xsi:type="xsd:string">senha_do_ws</senha>
+			<CodCorr xsi:type="xsd:int">codigo_da_corretora</CodCorr>
+			<SenhaCorr xsi:type="xsd:string">senha_da_corretora</SenhaCorr>
 			<certificado xsi:type="xsd:int">306157</certificado>
 		</getPropostaAreaCliente>
 	</Body>
@@ -515,11 +515,11 @@ perpage      | Int    | Sim | Total de itens por página
 <Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 	<Body>
 		<listaApoliceAreaCliente>
-			<senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
-			<CodCorr xsi:type="xsd:int">8</CodCorr>
-			<SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
+			<senha xsi:type="xsd:string">senha_do_ws</senha>
+			<CodCorr xsi:type="xsd:int">codigo_da_corretora</CodCorr>
+			<SenhaCorr xsi:type="xsd:string">senha_da_corretora</SenhaCorr>
 			<ramo xsi:type="xsd:string">todos</ramo>
-			<CPF xsi:type="xsd:string">21889781886</CPF>
+			<CPF xsi:type="xsd:string">cpf_do_cliente</CPF>
 			<page xsi:type="xsd:int">1</page>
 			<perpage xsi:type="xsd:int">10</perpage>
 		</listaApoliceAreaCliente>
@@ -600,10 +600,10 @@ calculo      | Int    | Sim | ID da proposta no TELEPORT
 <Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 	<Body>
 		<getApoliceAreaCliente>
-			<senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
-			<CodCorr xsi:type="xsd:int">8</CodCorr>
-			<SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
-			<certificado xsi:type="xsd:int">2</certificado>
+			<senha xsi:type="xsd:string">senha_do_ws</senha>
+			<CodCorr xsi:type="xsd:int">codigo_da_corretora</CodCorr>
+			<SenhaCorr xsi:type="xsd:string">senha_da_corretora</SenhaCorr>
+			<certificado xsi:type="xsd:int">306214</certificado>
 		</getApoliceAreaCliente>
 	</Body>
 </Envelope>
