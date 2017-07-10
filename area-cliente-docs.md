@@ -245,7 +245,7 @@ Parâmetro | Tipo   | Requerido | Descrição
 senha     | String | Sim | Senha da corretora para utilizar o WS
 CodCorr   | Int    | Sim | Código da corretora
 SenhaCorr | String | Sim | Senha da corretora
-ramo      | String | Sim | Ramo do seguro (utilize todos)
+ramo      | String | Sim | Ramo do seguro (utilize `todos`)
 CPF       | String | Sim | CPF do cliente
 page      | Int    | Sim | Página atual
 perpage   | Int    | Sim | Total de itens por página
@@ -487,21 +487,36 @@ certificado  | Int    | Sim | ID da proposta no TELEPORT
 Parâmetro    | Tipo   | Requerido | Descrição
 :-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
-CodCorr      | Int    | Sim |
-SenhaCorr    | String | Sim |
-ramo         | String | Sim |
+CodCorr      | Int    | Sim | Código da corretora
+SenhaCorr    | String | Sim | Senha da corretora
+ramo         | String | Sim | Ramo do seguro (utilize `todos`)
 CPF          | String | Sim | CPF do cliente
-page         | Int    | Sim |
-perpage      | Int    | Sim |
+page         | Int    | Sim | Página atual
+perpage      | Int    | Sim | Total de itens por página
 
 #### Request
 
 ``` xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<Body>
+		<listaApoliceAreaCliente>
+			<senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
+			<CodCorr xsi:type="xsd:int">8</CodCorr>
+			<SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
+			<ramo xsi:type="xsd:string">todos</ramo>
+			<CPF xsi:type="xsd:string">21889781886</CPF>
+			<page xsi:type="xsd:int">1</page>
+			<perpage xsi:type="xsd:int">10</perpage>
+		</listaApoliceAreaCliente>
+	</Body>
+</Envelope>
 ```
 
-#### Response
+#### [ERROR] Response
 
 ``` xml
+<erro>Você não possui apolices emitidas</erro>
 ```
 
 ---
@@ -511,16 +526,28 @@ perpage      | Int    | Sim |
 Parâmetro    | Tipo   | Requerido | Descrição
 :-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
-CodCorr      | Int    | Sim |
-SenhaCorr    | String | Sim |
-calculo      | Int    | Sim |
+CodCorr      | Int    | Sim | Código da corretora
+SenhaCorr    | String | Sim | Senha da corretora
+calculo      | Int    | Sim | ID da proposta no TELEPORT
 
 #### Request
 
 ``` xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<Body>
+		<getApoliceAreaCliente>
+			<senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
+			<CodCorr xsi:type="xsd:int">8</CodCorr>
+			<SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
+			<certificado xsi:type="xsd:int">2</certificado>
+		</getApoliceAreaCliente>
+	</Body>
+</Envelope>
 ```
 
-#### Response
+#### [ERROR] Response
 
 ``` xml
+<erro>Esta apolice não esta emitida</erro>
 ```
