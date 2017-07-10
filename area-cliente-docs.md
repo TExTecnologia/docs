@@ -480,6 +480,10 @@ certificado  | Int    | Sim | ID da proposta no TELEPORT
 <erro>Falha de autenticação.</erro>
 ```
 
+```xml
+<ERRO>Esta proposta não esta em aberto</ERRO>
+```
+
 ---
 
 ### listaApoliceAreaCliente
