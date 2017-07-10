@@ -187,8 +187,6 @@ perpage   | Int    | Não       | 10         | Total de itens por página
 
 #### [OK] Response
 
-Link para o [XML](https://github.com/TExTecnologia/docs/blob/master/lista-cotacoes-area-cliente-response.xml) completo
-
 ``` xml
 <?xml version="1.0"?>
 <retorno>
@@ -270,8 +268,6 @@ perpage   | Int    | Sim | Total de itens por página
 ```
 
 #### [OK] Response
-
-Link para o [XML](https://link.do/arquivo.xml) completo
 
 ``` xml
 <?xml version="1.0"?>
