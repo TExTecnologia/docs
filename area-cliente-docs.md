@@ -166,6 +166,7 @@ CPF       | String | Sim       | -          | CPF do cliente
 page      | Int    | Não       | 1          | Página atual
 perpage   | Int    | Não       | 10         | Total de itens por página
 
+#### Request
 
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -241,22 +242,76 @@ Link para o [XML](https://link.do/arquivo.xml) completo
 
 Parâmetro | Tipo   | Requerido | Descrição
 :-------  | :--:   | :-------: | :-------
-senha     | String | Sim |
-CodCorr   | Int    | Sim |
-SenhaCorr | String | Sim |
-ramo      | String | Sim |
+senha     | String | Sim | Senha da corretora para utilizar o WS
+CodCorr   | Int    | Sim | Código da corretora
+SenhaCorr | String | Sim | Senha da corretora
+ramo      | String | Sim | Ramo do seguro (utilize todos)
 CPF       | String | Sim | CPF do cliente
-page      | Int    | Sim |
-perpage   | Int    | Sim |
+page      | Int    | Sim | Página atual
+perpage   | Int    | Sim | Total de itens por página
 
 #### Request
 
 ``` xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="urn:uTeleport-Teleport" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<Body>
+		<listaCotacoesAreaCliente>
+			<senha xsi:type="xsd:string">G580r$fW$$$@@fhOt%5029#fZZZs%8jQp.nX*tf86.T%gAgp</senha>
+			<CodCorr xsi:type="xsd:int">8</CodCorr>
+			<SenhaCorr xsi:type="xsd:string">z987$tex</SenhaCorr>
+			<ramo xsi:type="xsd:string">todos</ramo>
+			<CPF xsi:type="xsd:string">21889781886</CPF>
+			<page xsi:type="xsd:int">1</page>
+			<perpage xsi:type="xsd:int">10</perpage>
+		</listaCotacoesAreaCliente>
+	</Body>
+</Envelope>
 ```
 
-#### Response
+#### [OK] Response
+
+Link para o [XML](https://link.do/arquivo.xml) completo
 
 ``` xml
+<?xml version="1.0"?>
+<retorno>
+	<pagination>
+		<total>114</total>
+		<page>1</page>
+		<pages>12</pages>
+		<perpage>10</perpage>
+	</pagination>
+	<colunas>
+		<cotacoes>{"calcn": "Cálculo","ramo": "Ramo", "item": "Bem Segurado", "tipo": "Tipo de Seguro", "datacalculo": "Data do Cálculo", "iniciovigencia": "Início de Vigência"}</cotacoes>
+	</colunas>
+	<cotacoes>
+		<cotacao>
+			<token>/OzVtEpLV4LBqjE93NsJg2fhyNG/autZKfdYz/yRcPl1iYTxDMTQVBRHWZUd</token>
+			<calcn>15648</calcn>
+			<ramo>Automóvel</ramo>
+			<item>ONIX LT 1.4 FLEX 4P AT</item>
+			<tipo>Novo</tipo>
+			<datacalculo>06/07/2017</datacalculo>
+			<iniciovigencia>06/07/2017</iniciovigencia>
+		</cotacao>
+		<cotacao>
+			<token>/OzVtEVc1RHQe3lXwLoA1/nzfxfc9h5iykorKZ/yVBPSiLddNnOdnQGKrDGK</token>
+			<calcn>15647</calcn>
+			<ramo>Automóvel</ramo>
+			<item>ONIX LT 1.4 FLEX 4P AT</item>
+			<tipo>Novo</tipo>
+			<datacalculo>06/07/2017</datacalculo>
+			<iniciovigencia>06/07/2017</iniciovigencia>
+		</cotacao>
+	</cotacoes>
+</retorno>
+```
+
+#### [ERROR] Response
+
+``` xml
+<erro>Falha de autenticação.</erro>
 ```
 
 ---
