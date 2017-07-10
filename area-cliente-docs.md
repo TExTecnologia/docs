@@ -310,6 +310,10 @@ perpage   | Int    | Sim | Total de itens por página
 <erro>Falha de autenticação.</erro>
 ```
 
+``` xml
+<erro>Você não possui propostas em aberto</erro
+```
+
 ---
 
 ### ultimaPropostaAreaCliente
@@ -512,6 +516,10 @@ perpage      | Int    | Sim | Total de itens por página
 #### [ERROR] Response
 
 ``` xml
+<erro>Falha de autenticação.</erro>
+```
+
+``` xml
 <erro>Você não possui apolices emitidas</erro>
 ```
 
@@ -543,6 +551,10 @@ calculo      | Int    | Sim | ID da proposta no TELEPORT
 ```
 
 #### [ERROR] Response
+
+``` xml
+<erro>Falha de autenticação.</erro>
+```
 
 ``` xml
 <erro>Esta apolice não esta emitida</erro>
