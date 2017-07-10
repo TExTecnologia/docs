@@ -156,6 +156,8 @@ token     | String | Sim       | Hash de identificação da requisição
 
 ### listaCotacoesAreaCliente
 
+Retorna uma lista de cotações
+
 Parâmetro | Tipo   | Requerido | Default    | Descrição
 --------- | :----: | :-------: | :--------: | ---------
 senha     | String | Sim       | -          | Senha da corretora para utilizar o WS
@@ -238,6 +240,8 @@ perpage   | Int    | Não       | 10         | Total de itens por página
 
 ### listaPropostaAreaCliente
 
+Retorna uma lista de propostas
+
 Parâmetro | Tipo   | Requerido | Descrição
 :-------  | :--:   | :-------: | :-------
 senha     | String | Sim | Senha da corretora para utilizar o WS
@@ -317,6 +321,8 @@ perpage   | Int    | Sim | Total de itens por página
 ---
 
 ### ultimaPropostaAreaCliente
+
+Retorna a última proposta
 
 Parâmetro    | Tipo   | Requerido | Descrição
 :-------     | :--:   | :-------: | :-------
@@ -399,6 +405,8 @@ CPF          | String | Sim | CPF do cliente
 ```
 
 ### getPropostaAreaCliente
+
+Retorna uma proposta com base no parâmetro `certificado`
 
 Parâmetro    | Tipo   | Requerido | Descrição
 :-------     | :--:   | :-------: | :-------
@@ -488,6 +496,8 @@ certificado  | Int    | Sim | ID da proposta no TELEPORT
 
 ### listaApoliceAreaCliente
 
+Retorna uma lista de apólices emitidas
+
 Parâmetro    | Tipo   | Requerido | Descrição
 :-------     | :--:   | :-------: | :-------
 senha        | String | Sim | Senha da corretora para utilizar o WS
@@ -573,6 +583,8 @@ perpage      | Int    | Sim | Total de itens por página
 ---
 
 ### getApoliceAreaCliente
+
+Retorna uma apólice com base no parâmetro `calculo`
 
 Parâmetro    | Tipo   | Requerido | Descrição
 :-------     | :--:   | :-------: | :-------
