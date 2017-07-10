@@ -517,6 +517,49 @@ perpage      | Int    | Sim | Total de itens por página
 </Envelope>
 ```
 
+#### [OK] Response
+
+``` xml
+<?xml version="1.0"?>
+<retorno>
+	<pagination>
+		<total>16</total>
+		<page>1</page>
+		<pages>2</pages>
+		<perpage>10</perpage>
+	</pagination>
+	<colunas>
+		<cotacoes>{"apolice": "Apólice", "seguradora": "Seguradora", "ramo": "Ramo", "item": "Bem Segurado", "tipo": "Tipo de Seguro", "dataproposta": "Data da Contratação da Proposta", "iniciovigencia": "Início de Vigência", "situacao": "Situação"}</cotacoes>
+	</colunas>
+	<cotacoes>
+		<cotacao>
+			<certificado>306261</certificado>
+			<ci></ci>
+			<apolice></apolice>
+			<seguradora>PORTO SEGURO CIA DE SEGUROS GERAIS</seguradora>
+			<ramo>Automóvel</ramo>
+			<item>ONIX LTZ 1.4 FLEX 4P AT</item>
+			<tipo>Novo</tipo>
+			<dataproposta>30/06/2017</dataproposta>
+			<iniciovigencia>30/06/2017</iniciovigencia>
+			<situacao>Vigente</situacao>
+		</cotacao>
+		<cotacao>
+			<certificado>306260</certificado>
+			<ci></ci>
+			<apolice></apolice>
+			<seguradora>PORTO SEGURO CIA DE SEGUROS GERAIS</seguradora>
+			<ramo>Automóvel</ramo>
+			<item>ONIX LTZ 1.4 FLEX 4P AT</item>
+			<tipo>Novo</tipo>
+			<dataproposta>30/06/2017</dataproposta>
+			<iniciovigencia>30/06/2017</iniciovigencia>
+			<situacao>Vigente</situacao>
+		</cotacao>
+	</cotacoes>
+</retorno>
+```
+
 #### [ERROR] Response
 
 ``` xml
@@ -524,7 +567,7 @@ perpage      | Int    | Sim | Total de itens por página
 ```
 
 ``` xml
-<erro>Você não possui apolices emitidas</erro>
+<erro>Esta apolice não esta emitida</erro>
 ```
 
 ---
@@ -552,6 +595,63 @@ calculo      | Int    | Sim | ID da proposta no TELEPORT
 		</getApoliceAreaCliente>
 	</Body>
 </Envelope>
+```
+
+### [OK] Response
+
+``` xml
+<?xml version="1.0"?>
+<retorno>
+	<colunas>
+		<dados>{"apolice": "Apolice", "ci": "Código de Identificação", "seguradora": "Seguradora", "ramo": "Ramo", "item": "Bem Segurado", "tipo": "Tipo de Seguro", "dataproposta": "Data da Contratação da Proposta", "iniciovigencia": "Início de Vigência", "situacao": "Situação"}</dados>
+		<parcelas>{"numero_parcela": "Parcela", "vencimento": "Vencimento", "valor": "Valor", "status": "Status", "pagamento": "Data do Pagamento"}</parcelas>
+	</colunas>
+	<apolice>
+		<dados>
+			<certificado>306261</certificado>
+			<ci></ci>
+			<apolice></apolice>
+			<seguradora>PORTO SEGURO CIA DE SEGUROS GERAIS</seguradora>
+			<ramo>Automóvel</ramo>
+			<item>ONIX LTZ 1.4 FLEX 4P AT</item>
+			<tipo>Novo</tipo>
+			<dataproposta>30/06/2017</dataproposta>
+			<iniciovigencia>30/06/2017</iniciovigencia>
+			<situacao>Vigente</situacao>
+		</dados>
+		<parcelas titulo="Pagamento">
+			<parcela>
+				<numero_parcela>1</numero_parcela>
+				<vencimento>30/06/2017</vencimento>
+				<valor>875,58</valor>
+				<pago>0</pago>
+				<pagamento></pagamento>
+			</parcela>
+		</parcelas>
+		<status>
+			<gravacao>
+				<label>Cotação Realizada</label>
+				<flag>true</flag>
+				<date>30/06/2017</date>
+			</gravacao>
+			<proposta>
+				<label>Proposta Transmitida</label>
+				<flag>true</flag>
+				<date>30/06/2017</date>
+			</proposta>
+			<pagamento>
+				<label>Pagamento Realizado</label>
+				<flag>true</flag>
+				<date>30/06/2017</date>
+			</pagamento>
+			<apolice>
+				<label>Apólice Emitida</label>
+				<flag>true</flag>
+				<date>10/07/2017</date>
+			</apolice>
+		</status>
+	</apolice>
+</retorno>
 ```
 
 #### [ERROR] Response
