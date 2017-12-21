@@ -12,6 +12,13 @@ O `cliente.autofill` só executado no Nimble se nenhuma caixa estiver respondida
 
 Tem uma opção de passar `menu=0` via querystring, isso irá esconder o botão de iniciar uma nova cotação, dessa forma vocês controlam
 
+### Recuperar cotação
+
+Sempre utilize `nova=1&jwt=eafb09....` na query string.  
+Opções: `nova` e `jwt`
+
+E para uma nova apenas `nova=1`
+
 
 ### Veiculo na carga
 
@@ -20,10 +27,10 @@ Os dados do veículo estão encadeados, ou seja, é necessário passar todos os 
  - fipe
  - ano_fabr
  - ano_modelo
- - cod_car
- - classe_car
- - marca
- - descricao_car
+ - cod_car (CODCAR)
+ - classe_car (CLASSE)
+ - marca (CODMARCA)
+ - descricao_car (MODELO)
 
 Veja na documentação: https://github.com/TExTecnologia/docs/wiki/Campos-da-cota%C3%A7%C3%A3o#valores-poss%C3%ADveis
 
