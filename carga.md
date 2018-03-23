@@ -1,7 +1,7 @@
 A estrutura é a seguinte:
 
 ```
-O site da RCI
+O site do cliente
 	Iframe (Nimble)
 	JavaScript
 		Carga (JSON)
@@ -21,7 +21,7 @@ switch (message.type) {
 //...		
 ```
 
-Se existir carga, o site da RCI envia um postMessage dizendo `cliente.autofill` e passa a carga...
+Se existir carga, o site do cliente envia um postMessage dizendo `cliente.autofill` e passa a carga...
 
 ```js
 // Envia os dados para o Nimble preencher as perguntas via postMessage
