@@ -1,0 +1,14 @@
+{
+  "cert": 301032,
+  "endosso": 0,
+  "item": 1,
+  "sinistro": 1,
+  "cliente_id": 25366,
+  "cliente_nome": "PIETER LEKKERKERK",
+  "seguradora": "SulAmérica",
+  "seguradora_codigo": 7110,
+  "numero_apolice": "53636354",
+  "numero_sinistro": "2345678",
+  "tipo_sinistro": "Perda Total",
+  "data_hora_emissao": "2016-10-16T00:00:00.000Z"
+}

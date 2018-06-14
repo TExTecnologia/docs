@@ -1,0 +1,12 @@
+{
+  "cert": 300977,
+  "endosso": 2,
+  "cliente_id": 25373,
+  "cliente_nome": "MARCEL BANKOW",
+  "seguradora": "SulAmérica",
+  "seguradora_codigo": 7110,
+  "motivo_recusa": "Falta de Pagamento FCA",
+  "data_hora_recusa": "2011-04-29T14:23:01.000Z",
+  "usuario_id": 478,
+  "usuario_nome": "Omar Ajame Zanatto Miranda"
+}

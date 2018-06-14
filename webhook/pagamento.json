@@ -1,0 +1,15 @@
+{
+  "cert": 305473,
+  "endosso": 0,
+  "item": 1,
+  "parcela": 1,
+  "cliente_id": 27987,
+  "cliente_nome": "GERMANA SICILIANO",
+  "seguradora": "HDI",
+  "seguradora_codigo": 6572,
+  "numero_apolice": "1001989",
+  "valor_parcela": 1970.71,
+  "valor_pago": 1970.71,
+  "data_hora_pagamento": "2017-04-06T00:00:00.000Z",
+  "data_hora_vencimento": "2017-04-06T00:00:00.000Z"
+}

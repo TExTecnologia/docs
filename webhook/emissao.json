@@ -1,0 +1,15 @@
+{
+  "cert": 300942,
+  "cliente_id": 25366,
+  "cliente_nome": "PIETER LEKKERKERK",
+  "seguradora": "SulAmérica",
+  "seguradora_codigo": 7110,
+  "numero_proposta": null,
+  "numero_apolice": "53636354",
+  "inicio_vigencia": "2008-11-14T00:00:00.000Z",
+  "fim_vigencia": "2009-11-14T00:00:00.000Z",
+  "valor_premio": 2636.16,
+  "valor_comissao": 164.76,
+  "percentual_comissao": 6.25,
+  "data_hora_emissao": "2016-08-16T00:00:00.000Z"
+}

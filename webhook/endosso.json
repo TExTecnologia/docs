@@ -1,0 +1,17 @@
+{
+  "cert": 301029,
+  "endosso": 1,
+  "cliente_id": 25385,
+  "cliente_nome": "TESTE ZERO KM",
+  "seguradora": "SulAmérica",
+  "seguradora_codigo": 7110,
+  "numero_proposta": null,
+  "numero_apolice": "111122",
+  "numero_endosso": "0000000000001",
+  "inicio_vigencia": "2010-10-10T00:00:00.000Z",
+  "fim_vigencia": "2010-10-10T00:00:00.000Z",
+  "valor_premio": 0,
+  "valor_comissao": 0,
+  "percentual_comissao": 16.67,
+  "data_hora_emissao": "2010-02-03T00:00:00.000Z"
+}
