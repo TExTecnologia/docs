@@ -1,24 +1,28 @@
 {
-  "calc_n": 557000,
+  "calculo": 557000,
   "usuario_id": null,
   "usuario": null,
-  "produtor_id": 2,
-  "produtor": "Wagner Godoi",
+  "produtor_id": 98,
+  "produtor": "Ernando Veronese",
   "unidade_id": 1,
   "unidade": "Principal",
-  "extra_doc": null,
-  "cliente_id": 28576,
+  "extra_doc": "false",
+  "cliente_id": null,
   "cliente_nome": "Aline Cristina dos Santos",
   "data_nascimento": "1981-09-01T00:00:00.000Z",
   "cpf": "361.055.308-11",
   "cnpj": null,
-  "email": "aline@exemplo.com.br",
+  "email": "orlandi@textecnologia.com.br",
   "telefone": "(11) 32131232",
   "celular": "(11) 968990999",
   "tipo_pessoa": "PF",
   "renovacao": 0,
   "inicio_vigencia": "2018-05-16T00:00:00.000Z",
   "fim_vigencia": "2019-05-16T00:00:00.000Z",
+  "campanha": null,
+  "origem": "1",
+  "origem_descricao": "Nimble",
+  "id_lead": null,
   "itens": [
     {
       "calculo": 557000,
@@ -29,9 +33,10 @@
       "modelo": "ONIX HATCH LT 1.4 FLEX 4P",
       "ano_fabricacao": 2014,
       "ano_modelo": 2015,
-      "combustivel": null,
+      "combustivel": "Gasolina e Álcool (Flex)",
       "placa": "FLU4387",
       "chassi": "9BGKS48R0FG314856",
+      "cor": "Outros",
       "blindado": 0,
       "antifurto": 1,
       "cep_pernoite": "04653055",
@@ -40,6 +45,7 @@
       "proprietario_cpf": "361.055.308-11",
       "proprietario_cnpj": null,
       "anterior_seguradora": 0,
+      "anterior_seguradora_nome": "...",
       "anterior_quantidade_sinistro": 0,
       "anterior_apolice_inicio_vigencia": null,
       "anterior_apolice_fim_vigencia": null,
@@ -49,7 +55,7 @@
       "cp_cpf": "361.055.308-11",
       "cp_sexo": "F",
       "cp_nascimento": "1981-09-01T00:00:00.000Z",
-      "cp_profissao": "PROGRAMADOR"
+      "cp_profissao": "AGENTES PENITENCIÁRIOS"
     }
   ]
 }
